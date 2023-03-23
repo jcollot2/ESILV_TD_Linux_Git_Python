@@ -14,3 +14,7 @@ def get_manor_ids(place_id):
         res.append(data[i]['id'])
     return res
 
+if __name__ == '__main__':
+    place_id = 1036
+    manor_ids = get_manor_ids(place_id)
+    print(f"Manor IDs for {place_id}: {manor_ids}")
