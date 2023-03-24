@@ -2,6 +2,19 @@ import requests
 import json
 
 def get_manor_ids(place_id):
+    """
+    get the manors id of a place
+
+    Parameters
+    ----------
+    place_id : int
+
+    Returns
+    -------
+    res : list of id
+        DESCRIPTION.
+
+    """
     url = f"https://opendomesday.org/api/1.0/place/{place_id}/"
     response = requests.get(url)
 
@@ -17,4 +30,4 @@ def get_manor_ids(place_id):
 if __name__ == '__main__':
     place_id = 1036
     manor_ids = get_manor_ids(place_id)
-    print(f"Manor IDs for {place_id}: {manor_ids}")
+    print(f"Manor IDs for place {place_id}: {manor_ids}")
